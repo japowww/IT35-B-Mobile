@@ -1,26 +1,29 @@
 import {
   IonButton,
+  IonButtons,
   IonContent,
   IonHeader,
   IonMenuButton,
   IonPage,
   IonRouterOutlet,
   IonTitle,
+  IonToolbar,
 } from "@ionic/react";
 
 const About: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonRouterOutlet>
-          <IonButton slot="start">
-            <IonMenuButton></IonMenuButton>
-          </IonButton>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
           <IonTitle>About</IonTitle>
-        </IonRouterOutlet>
+        </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <h1>About</h1>
+
+      <IonContent className="ion-padding">
+        <h1>Ionic kini</h1>
       </IonContent>
     </IonPage>
   );
