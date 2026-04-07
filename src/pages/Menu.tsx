@@ -1,27 +1,33 @@
 import {
-  IonButton,
-  IonContent,
   IonHeader,
-  IonMenuButton,
+  IonMenu,
   IonPage,
   IonRouterOutlet,
+  IonSplitPane,
   IonTitle,
+  IonToolbar,
 } from "@ionic/react";
+import { Redirect, Route } from "react-router";
+import Home from "./Home";
 
 const Menu: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonRouterOutlet>
-          <IonButton slot="start">
-            <IonMenuButton></IonMenuButton>
-          </IonButton>
-          <IonTitle>Menu</IonTitle>
+      <IonSplitPane contentId="main">
+        <IonMenu contentId="main">
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Menu</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+        </IonMenu>
+        <IonRouterOutlet id="main">
+          <Route exact path="/app/home" component={Home} />
+          <Route exact path="/app">
+            <Redirect to="/app/home" />
+          </Route>
         </IonRouterOutlet>
-      </IonHeader>
-      <IonContent fullscreen>
-        <h1>Menu</h1>
-      </IonContent>
+      </IonSplitPane>
     </IonPage>
   );
 };

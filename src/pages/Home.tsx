@@ -1,6 +1,14 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonButton,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import ExploreContainer from "../components/ExploreContainer";
+import "./Home.css";
 
 const Home: React.FC = () => {
   return (
@@ -13,6 +21,9 @@ const Home: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
+            <IonButton slot="start">
+              <IonMenuButton></IonMenuButton>
+            </IonButton>
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
