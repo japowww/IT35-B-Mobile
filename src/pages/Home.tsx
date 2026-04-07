@@ -1,5 +1,6 @@
 import {
   IonButton,
+  IonButtons,
   IonContent,
   IonHeader,
   IonMenuButton,
@@ -15,15 +16,15 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+          <IonButtons slot="start">
+            <IonMenuButton></IonMenuButton>
+          </IonButtons>
           <IonTitle>Blank</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonButton slot="start">
-              <IonMenuButton></IonMenuButton>
-            </IonButton>
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
