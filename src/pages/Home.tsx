@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       <IonTabs>
         <IonTabBar slot="bottom">
           <IonToolbar>
-            <IonTitle>Home</IonTitle>
+            <IonTitle>Homes</IonTitle>
           </IonToolbar>
 
           {tabs.map((item, index) => (
