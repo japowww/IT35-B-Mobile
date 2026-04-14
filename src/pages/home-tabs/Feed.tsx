@@ -15,7 +15,7 @@ const Feed: React.FC = () => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
-            <IonTitle>Feed</IonTitle>
+            <IonTitle></IonTitle>
           </IonButtons>
         </IonToolbar>
         <IonContent>

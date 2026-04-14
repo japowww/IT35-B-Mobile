@@ -15,7 +15,7 @@ const Favorites: React.FC = () => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
-            <IonTitle>Favorites</IonTitle>
+            <IonTitle></IonTitle>
           </IonButtons>
         </IonToolbar>
         <IonContent>

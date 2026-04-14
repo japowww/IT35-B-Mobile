@@ -15,7 +15,7 @@ const Search: React.FC = () => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
-            <IonTitle>Search</IonTitle>
+            <IonTitle></IonTitle>
           </IonButtons>
         </IonToolbar>
         <IonContent>
