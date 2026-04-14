@@ -8,21 +8,21 @@ import {
   IonToolbar,
 } from "@ionic/react";
 
-const Template: React.FC = () => {
+const Feed: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton></IonMenuButton>
-            <IonTitle>Template</IonTitle>
+            <IonTitle>Feed</IonTitle>
           </IonButtons>
         </IonToolbar>
         <IonContent>
-          <h1>Template</h1>
+          <h1>Feed</h1>
         </IonContent>
       </IonHeader>
     </IonPage>
   );
 };
-export default Template;
+export default Feed;
