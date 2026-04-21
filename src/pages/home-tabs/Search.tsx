@@ -31,6 +31,7 @@ const Search: React.FC = () => {
     { name: "The Legend of Zelda" },
     { name: "Pac-Man" },
     { name: "Super Mario World" },
+    { name: "ssnik" },
   ];
 
   const [searchText, setSearchText] = useState("");
