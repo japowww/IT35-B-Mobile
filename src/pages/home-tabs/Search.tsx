@@ -31,7 +31,6 @@ const Search: React.FC = () => {
     { name: "The Legend of Zelda" },
     { name: "Pac-Man" },
     { name: "Super Mario World" },
-    { name: "ssnik" },
   ];
 
   const [searchText, setSearchText] = useState("");
@@ -57,9 +56,7 @@ const Search: React.FC = () => {
             <IonTitle></IonTitle>
           </IonButtons>
         </IonToolbar>
-        <IonContent>
-          <h1></h1>
-        </IonContent>
+        <IonContent></IonContent>
       </IonHeader>
       <IonContent className="ion-padding">
         <IonSearchbar
@@ -68,6 +65,7 @@ const Search: React.FC = () => {
           debounce={0}
           onIonInput={(e) => setSearchText(e.detail.value!)}
         />
+
         <IonList>
           {filtered.map((item, index) => (
             <IonCard key={index}>

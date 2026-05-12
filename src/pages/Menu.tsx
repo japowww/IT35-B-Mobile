@@ -13,21 +13,28 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { Redirect, Route } from "react-router";
+import { Redirect, Route, useHistory } from "react-router";
 import Home from "./Home";
 import About from "./About";
 import {
   homeOutline,
   logOutOutline,
   informationCircleOutline,
+  logoGoogle,
 } from "ionicons/icons";
 import { Icon } from "ionicons/dist/types/components/icon/icon";
+import { supabase } from "../lib/supabaseClient";
 
 const Menu: React.FC = () => {
+  const history = useHistory();
   const path = [
     { name: "Home", url: "/app/home", icon: homeOutline },
     { name: "About", url: "/app/about", icon: informationCircleOutline },
   ];
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    history.replace("/");
+  };
   return (
     <IonPage>
       <IonSplitPane contentId="main">
@@ -47,10 +54,10 @@ const Menu: React.FC = () => {
               </IonMenuToggle>
             ))}
 
-            <IonButton routerLink="/" routerDirection="back" expand="full">
-              <IonIcon icon={logOutOutline} slot="start"></IonIcon>
-              Logout
-            </IonButton>
+             <IonButton expand="full" color="primary" onClick={handleLogout} fill="outline" shape="round">
+          <IonIcon icon = {logoGoogle}/>
+         Logout
+        </IonButton>
           </IonContent>
         </IonMenu>
         <IonRouterOutlet id="main">
